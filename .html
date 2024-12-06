@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools in Medicine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background: #44ac49;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: #e2e8f0;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+        }
+        li:hover {
+            background: #d1d5db;
+        }
+        .tool-name {
+            font-weight: bold;
+        }
+        .tool-info {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Top 10 AI Tools in Medicine</h1>
+    </header>
+    <div class="container">
+        <ul id="tools-list"></ul>
+    </div>
+    <script>
+        const tools = [
+            { name: "IBM Watson Health", description: "Clinical decision support." },
+            { name: "Google DeepMind Health", description: "Diagnostic assistance." },
+            { name: "PathAI", description: "Pathology and diagnostic analysis." },
+            { name: "Zebra Medical Vision", description: "Radiology imaging analysis." },
+            { name: "Butterfly iQ", description: "Portable ultrasound AI." },
+            { name: "Aidoc", description: "AI for radiology workflows." },
+            { name: "Corti", description: "AI-powered diagnostic assistant for emergency calls." },
+            { name: "Olive AI", description: "Automates administrative tasks in healthcare." },
+            { name: "Arterys", description: "Medical imaging AI platform." },
+            { name: "Tempus", description: "Precision medicine using AI." },
+        ];
+
+        const toolsList = document.getElementById('tools-list');
+        tools.forEach(tool => {
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `
+                <span class="tool-name">${tool.name}</span>
+                <span class="tool-info">${tool.description}</span>
+            `;
+            toolsList.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>
+
+
